@@ -21,4 +21,10 @@ public class Aluno {
     public void setStatusMatricula(boolean statusMatricula) {
         this.statusMatricula = statusMatricula;
     }
+
+    public void verificaAlunoMatriculado() throws ValidacaoException {
+        if (!this.statusMatricula) {
+            throw new ValidacaoException("Aluno não matriculado!");
+        }
+    }
 }

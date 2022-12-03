@@ -8,7 +8,8 @@ public class ResponderChamadaService {
         this.chamadaRepository = chamadaRepository;
     }
 
-    public Chamada apply(Chamada chamada) {
+    public Chamada apply(Chamada chamada) throws ValidacaoException {
+        chamada.getAluno().verificaAlunoMatriculado();
        return chamadaRepository.salvar(chamada);
      }
 }
