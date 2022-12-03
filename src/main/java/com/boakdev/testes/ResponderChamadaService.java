@@ -10,5 +10,5 @@ public class ResponderChamadaService {
 
     public Chamada apply(Chamada chamada) {
        return chamadaRepository.salvar(chamada);
-    }
+     }
 }

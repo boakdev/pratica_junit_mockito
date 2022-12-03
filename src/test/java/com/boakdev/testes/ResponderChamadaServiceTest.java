@@ -36,6 +36,8 @@ public class ResponderChamadaServiceTest extends TestBase {
 
         Chamada resultado = responderChamadaService.apply(chamada);
 
+        Mockito.verify(chamadaRepository).salvar(chamada);
+
         Assertions.assertEquals(resultado.getData(), outraChamada.getData());
     }
 }
